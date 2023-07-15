@@ -1,0 +1,181 @@
+.home {
+  font-family: "Inter", sans-serif;
+}
+.navbar__heading {
+  font-weight: bold;
+  font-size: 32px;
+  width: 75%;
+  padding-left: 0.8rem;
+}
+
+.navbar__heading span {
+  margin: 0 1rem;
+}
+
+.navbar__fun {
+  width: 25%;
+}
+.navbar__searchbar {
+  border-radius: 10px;
+}
+.navbar__searchbar--input {
+  outline: none;
+  border: none;
+  padding: 0.8rem 0.8rem;
+  width: 80%;
+}
+.navbar__menu {
+  padding: 0.8rem 1rem;
+  border-radius: 5px;
+  margin: 0 0.5rem;
+}
+
+/* ---------------------categories-start------------- */
+.categories {
+  margin-top: 2rem;
+}
+.categories ul {
+  list-style: none;
+}
+
+.categories ul li {
+  margin: 0 3rem;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  background-color: #f2f2f2;
+  transition: all 0.4s;
+}
+.categories ul li:hover {
+  background-color: black;
+  color: white;
+}
+/* ----product card---------------- */
+
+.card {
+  border: none;
+  outline: none;
+}
+
+.card__imgcontainer .saved {
+  top: 2rem;
+  right: 2rem;
+  position: absolute;
+  padding: 0.5rem;
+  background-color: aliceblue;
+  box-shadow: 0px 5px 5px 1px rgba(0, 0, 0, 0.208);
+  border-radius: 5px;
+}
+
+/* --------navigations------------- */
+
+.navigations {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.navigations ul {
+  list-style: none;
+  margin-top: 1rem;
+  width: 50%;
+}
+
+.navigations ul li {
+  padding: 0.5rem 1rem;
+}
+
+/* media query---------------  */
+@media only screen and (max-width: 750px) {
+  .nav {
+    flex-direction: column;
+  }
+
+  .navbar__heading {
+    width: 100vw;
+    padding: 0 2rem;
+  }
+
+  .navbar__fun {
+    display: block;
+    width: 100%;
+    padding: 1rem 1rem;
+  }
+  .navbar__menu {
+    padding: 1rem 1.2rem;
+    border-radius: 5px;
+  }
+  .navbar__searchbar--input {
+    outline: none;
+    border: none;
+    padding: 1rem 0.8rem;
+    width: 80%;
+  }
+
+  .categories {
+    margin-top: 0rem;
+  }
+
+  .categories ul li {
+    margin: 0 1.2rem;
+  }
+
+  .navigations ul {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navigations ul li img {
+    height: 25px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .navbar__heading {
+    width: 100vw;
+    padding: 0 0.5rem;
+  }
+
+  .navbar__fun {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0.2rem;
+  }
+
+  .navbar__menu {
+    padding: 0.5rem 0.8rem;
+    border-radius: 5px;
+  }
+
+  .navbar__searchbar--input {
+    outline: none;
+    border: none;
+    padding: 0.5rem 0.3rem;
+    width: 80%;
+  }
+
+  .categories ul li {
+    margin: 0 0.5rem;
+  }
+
+  .navigations ul {
+    width: 100%;
+
+    justify-content: space-around;
+  }
+  .navigations ul li p {
+    font-size: 13px;
+    font-weight: lighter;
+    color: rgba(0, 0, 0, 0.6);
+  }
+  .navigations ul li img {
+    height: 16px;
+  }
+  .card__imgcontainer .saved {
+    top: 1rem;
+    right: 1rem;
+  }
+}

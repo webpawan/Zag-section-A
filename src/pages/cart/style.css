@@ -1,0 +1,35 @@
+.cart {
+  font-family: "Inter", sans-serif;
+}
+
+.bg__gray {
+  background-color: #f2f2f2;
+}
+
+.cart {
+  border-radius: 10px;
+}
+
+.cart__product--info {
+  width: 20%;
+}
+
+.cart__product--info img {
+  height: 100%;
+  width: 100%;
+}
+
+.fa-trash-can {
+  font-size: 1.2rem;
+}
+
+.buttons button {
+  padding: 0.1rem 0.5rem;
+  border: 2px solid rgba(0, 0, 0, 0.184);
+}
+
+.voucher input {
+  width: 100%;
+  border: none;
+  border-radius: 15px;
+}
