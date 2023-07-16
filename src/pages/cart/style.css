@@ -2,6 +2,21 @@
   font-family: "Inter", sans-serif;
 }
 
+.cart__count--container {
+  position: relative;
+}
+
+.cart__count {
+  position: absolute;
+  font-size: 10px;
+  top: 0px;
+  left: 15px;
+  background-color: black;
+  color: white;
+  padding: 1px 5px;
+  border-radius: 100%;
+}
+
 .fw__light {
   font-weight: 300;
 }

@@ -1,62 +1,94 @@
-import React from "react";
-import bellIcon from "../../assets/icons/bell-01.png";
-import backIcon from "../../assets/icons/Icon (8).png";
-import img from "../../assets/images/4.0.webp";
-import productIcon from "../../assets/icons/beg.png";
+import React, { useState } from "react";
 
 import "./style.css";
+import { useLocation } from "react-router";
+import { Link } from "react-router-dom";
 const Detail = () => {
+  const location = useLocation();
+  const [selectedSize, setSelectedSize] = useState("");
+  const data = location.state;
+
+  const handleSizeSelection = (size) => {
+    setSelectedSize(size);
+  };
+
   return (
     <div className="container-fluid detail position-relative overflow-hidden">
       <div className=" detail__navigations mt-5 mb-2  d-flex justify-content-between align-item-center">
-        <div className="detail__back--icon">
-          <img src={backIcon} alt="" srcset="" className="img-fluid" />
-        </div>
+        <Link to="/" className="detail__back--icon">
+          <img src="/icons/rightarrow.png" alt="" className="img-fluid ms-2" />
+        </Link>
+
         <h1>Details</h1>
-        <div className="detail__bell--icon">
-          <img src={bellIcon} className="img-fluid" alt="" srcset="" />
-        </div>
+        <span className="detail__count--container ">
+          <img src="/icons/bell.png" alt="" className="img-fluid" />
+          <p className="detail__count">1</p>
+        </span>
       </div>
       <div className="row  mx-auto ">
         <div className="detail__imgcomponent col-12 col-md-4 my-2 mx-auto position-relative">
-          <img src={img} alt="" className="img-fluid" srcset="" />
+          <img src={data.img} alt="" className="img-fluid" />
           <div className="detail__imgcomponent--save-icon">
             <span>
-              <i class="fa-regular fa-heart"></i>
+              <i className="fa-regular fa-heart"></i>
             </span>
           </div>
         </div>
         <div className=" detail__product--info col-12 col-md-8 my-2 mx-auto">
-          <h1>Regular fit slogan</h1>
+          <h1>{data.name}</h1>
           <div className="ratting">
             <span className="ratting__icon me-2">
-              <i class="fa-regular fa-star"></i>
+              <i className="fa-regular fa-star"></i>
             </span>
             4.5/5<span className="mx-1"> (45 reviews)</span>
           </div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
-            minima sit commodi quia totam accusamus id ducimus labore qui neque.
-          </p>
+          <p>{data.desc}</p>
           <h3 className="my-2">Choose size</h3>
-          <div className=" d-flex">
-            <div className="small__size px-3 py-2 rounded border">S</div>
-            <div className="mid__size mx-2 px-3 py-2 rounded border">M</div>
-            <div className="big__size px-3 py-2 rounded border">L</div>
+          <div className=" d-flex controller__buttons">
+            <div
+              onClick={() => handleSizeSelection("S")}
+              className={
+                selectedSize === "S"
+                  ? "selected  px-3 py-2 rounded border"
+                  : "small__size px-3 py-2 rounded border"
+              }
+            >
+              S
+            </div>
+            <div
+              onClick={() => handleSizeSelection("M")}
+              className={
+                selectedSize === "M"
+                  ? "selected  px-3 py-2 rounded border mx-2"
+                  : "small__size px-3 py-2 rounded border mx-2"
+              }
+            >
+              M
+            </div>
+            <div
+              onClick={() => handleSizeSelection("L")}
+              className={
+                selectedSize === "L"
+                  ? "selected  px-3 py-2 rounded border"
+                  : "small__size px-3 py-2 rounded border"
+              }
+            >
+              L
+            </div>
           </div>
           <div className="mt-2">
             <hr />
             <div className="addtocart__button--container d-flex align-items-center">
               <div className="price d-flex flex-column ">
-                <span>Price</span> <span>INR 1,190</span>
+                <span>Price</span> <span>INR {data.price}</span>
               </div>
-              <div className="addtocart__btn">
+              <Link to="/cart" className="addtocart__btn text-decoration-none">
                 {" "}
-                <span className="">
-                  <img src={productIcon} alt="" srcset="" />
+                <span className="mx-2">
+                  <img src="/icons/beg.png" alt="" />
                 </span>{" "}
                 Add to Cart
-              </div>
+              </Link>
             </div>
           </div>
         </div>
