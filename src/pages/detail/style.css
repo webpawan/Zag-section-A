@@ -4,6 +4,15 @@
   font-family: "Inter", sans-serif;
 }
 
+.detail__imgcomponent {
+  width: 100%;
+}
+
+.detail__imgcomponent img {
+  height: 100%;
+  width: 100%;
+}
+
 .detail__imgcomponent--save-icon {
   position: absolute;
   top: 3rem;
@@ -17,11 +26,49 @@
   border-radius: 5px;
   box-shadow: 0px 5px 5px 2px rgba(0, 0, 0, 0.184);
 }
+.detail__product--info p {
+  width: 65%;
 
+  color: rgba(0, 0, 0, 0.6);
+  margin-top: 2rem;
+}
 .ratting__icon i {
   color: gold;
 }
 .addtocart__btn {
   background-color: black;
   color: white;
+  margin-left: 1rem;
+}
+
+.addtocart__btn {
+  padding: 0.8rem 1.5rem;
+  border-radius: 15px;
+}
+.price span:first-child {
+  color: rgba(0, 0, 0, 0.6);
+}
+.price span:last-child {
+  font-size: 1.3rem;
+}
+@media only screen and (max-width: 750px) {
+  .detail__imgcomponent {
+    width: 75% !important;
+  }
+  .detail__product--info p {
+    width: 100%;
+    color: rgba(0, 0, 0, 0.6);
+    margin-top: 1rem;
+  }
+  .addtocart__btn {
+    padding: 1rem 1.7rem;
+    border-radius: 15px;
+  }
+
+  .addtocart__button--container {
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (max-width: 450px) {
 }

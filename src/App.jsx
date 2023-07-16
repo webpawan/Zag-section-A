@@ -7,13 +7,13 @@ import { Route, Routes } from "react-router-dom";
 const App = () => {
   return (
     <>
-      <Routes>
+      {/* <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/id:123" element={<Detail />} />
         <Route path="/cart" element={<Cart />} />
-      </Routes>
+      </Routes> */}
 
-      {/* <Cart /> */}
+      <Detail />
     </>
   );
 };

@@ -2,13 +2,13 @@ import React from "react";
 import bellIcon from "../../assets/icons/bell-01.png";
 import backIcon from "../../assets/icons/Icon (8).png";
 import img from "../../assets/images/4.0.webp";
-import saveIcon from "../../assets/icons/Icon (3).png";
+import productIcon from "../../assets/icons/beg.png";
 
 import "./style.css";
 const Detail = () => {
   return (
     <div className="container-fluid detail position-relative overflow-hidden">
-      <div className=" detail__navigations mt-5 d-flex justify-content-between align-item-center">
+      <div className=" detail__navigations mt-5 mb-2  d-flex justify-content-between align-item-center">
         <div className="detail__back--icon">
           <img src={backIcon} alt="" srcset="" className="img-fluid" />
         </div>
@@ -18,7 +18,7 @@ const Detail = () => {
         </div>
       </div>
       <div className="row  mx-auto ">
-        <div className="col-12 col-md-4 my-2 mx-auto position-relative">
+        <div className="detail__imgcomponent col-12 col-md-4 my-2 mx-auto position-relative">
           <img src={img} alt="" className="img-fluid" srcset="" />
           <div className="detail__imgcomponent--save-icon">
             <span>
@@ -26,7 +26,7 @@ const Detail = () => {
             </span>
           </div>
         </div>
-        <div className="col-12 col-md-8 my-2 mx-auto">
+        <div className=" detail__product--info col-12 col-md-8 my-2 mx-auto">
           <h1>Regular fit slogan</h1>
           <div className="ratting">
             <span className="ratting__icon me-2">
@@ -46,8 +46,18 @@ const Detail = () => {
           </div>
           <div className="mt-2">
             <hr />
-            <div className="price">price INR 1,190</div>
-            <div className="addtocart__btn">add to cart</div>
+            <div className="addtocart__button--container d-flex align-items-center">
+              <div className="price d-flex flex-column ">
+                <span>Price</span> <span>INR 1,190</span>
+              </div>
+              <div className="addtocart__btn">
+                {" "}
+                <span className="">
+                  <img src={productIcon} alt="" srcset="" />
+                </span>{" "}
+                Add to Cart
+              </div>
+            </div>
           </div>
         </div>
       </div>
