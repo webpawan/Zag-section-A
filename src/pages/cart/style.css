@@ -80,6 +80,10 @@
 .checkout {
   width: 50%;
 }
+
+.delete__icon {
+  cursor: pointer;
+}
 /* media query---------------  */
 @media only screen and (max-width: 750px) {
   .detail__navigations {
